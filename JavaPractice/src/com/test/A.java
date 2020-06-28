@@ -1,6 +1,5 @@
 package com.test;
 import java.util.*;
-
 class A
 {
 	public static void main(String args[])
@@ -10,16 +9,19 @@ class A
 		l.add("hi");
 		l.add("there");
 		l.add("How are you");
-		System.out.println("LIst"+l.toString());
+		System.out.println("List"+l.toString());
 		for(int i=0;i<5;i++) {
 			l.add("Number"+String.valueOf(i));
 		}
 		Collections.reverse(l);
-		System.out.print("Reversed list is "+l);
-		LinkedList<String> l2=new LinkedList<String>();
-		System.out.print("copied list is "+l2);
-		 for(String res:l2) {
-			 System.out.println("val="+res);
+		 for(String res:l) {
+			 System.out.println(res);
 		 }
+		 for(int i=0;i<l.size();i++)
+		 {
+			 System.out.println(l.get(i));
+		 }
+		 System.out.println("Using for each ");
+		 l.stream().forEach((t)->{System.out.println(t);});
 	}
 }
