@@ -23,5 +23,6 @@ class A
 		 }
 		 System.out.println("Using for each ");
 		 l.stream().forEach((t)->{System.out.println(t);});
+		 l.forEach((t)->{System.out.println(t);});
 	}
 }
